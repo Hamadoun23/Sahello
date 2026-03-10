@@ -46076,7 +46076,7 @@ p.color-g {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .agntix-light .design-choose-2-style .design-choose-item span {
-  color: var(--tp-common-black);
+  color: #2A4C3A;
 }
 .agntix-light .design-choose-2-style .design-choose-item p {
   color: rgba(0, 0, 0, 0.6);
@@ -46295,21 +46295,24 @@ p.color-g {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #111013 50%, #e4e4e4 50%);
+  background-image: linear-gradient(to right, #2A4C3A 50%, #e4e4e4 50%);
 }
 .agntix-light .design-project-title-box p {
   color: var(--tp-common-black-7);
 }
 .agntix-light .tp-btn-sky-border {
-  color: var(--tp-common-black-7);
-  border: 1.5px solid #0e0f11;
+  color: #2A4C3A;
+  border: 1.5px solid #2A4C3A;
 }
 .agntix-light .tp-btn-sky-border:hover {
-  background-color: #0e0f11;
+  background-color: #2A4C3A;
   color: var(--tp-common-white);
 }
 .agntix-light .design-project-title {
-  color: var(--tp-common-black-7);
+  color: #2A4C3A;
+}
+.agntix-light .design-project-title a {
+  color: #2A4C3A;
 }
 .agntix-light .design-project-content span {
   color: var(--tp-common-black-7);
@@ -46323,8 +46326,11 @@ p.color-g {
 .agntix-light .creative-footer-style .tp-footer-widget-title-sm.pre::before {
   background-color: var(--tp-common-black);
 }
+.agntix-light .design-service-big-text h4 {
+  color: #2A4C3A;
+}
 .agntix-light .design-service-left span {
-  color: var(--tp-text-body);
+  color: #2A4C3A;
 }
 .agntix-light .design-service-left span::after {
   background-color: rgba(0, 0, 0, 0.1);
@@ -46336,17 +46342,18 @@ p.color-g {
   color: var(--tp-text-body);
 }
 .agntix-light .design-service-accordion .accordion-buttons i {
-  color: var(--tp-common-black-7);
+  color: #2A4C3A;
 }
 .agntix-light .design-service-accordion .accordion-buttons:not(.collapsed) i {
-  color: var(--tp-common-black);
+  color: #2A4C3A;
 }
 .agntix-light .design-service-category a {
-  color: var(--tp-common-black-7);
-  border-color: rgba(0, 0, 0, 0.1);
+  color: #2A4C3A;
+  border-color: rgba(42, 76, 58, 0.3);
 }
 .agntix-light .design-service-category a:hover {
   color: var(--tp-common-white);
+  background-color: #2A4C3A;
 }
 .agntix-light .creative-project-social a {
   background-color: #f6f6f9;
@@ -46370,10 +46377,10 @@ p.color-g {
 }
 .agntix-light .tp-btn-sky-border.solid-bg {
   color: var(--tp-common-white);
-  background-color: #0e0f11;
+  background-color: #2A4C3A;
 }
 .agntix-light .tp-btn-sky-border.solid-bg:hover {
-  color: var(--tp-common-black-7);
+  color: #2A4C3A;
   background-color: transparent;
 }
 .agntix-light .creative-text-item span {
@@ -46428,7 +46435,7 @@ p.color-g {
   color: rgba(0, 0, 0, 0.6);
 }
 .agntix-light .design-footer-widget-title {
-  color: var(--tp-common-black-7);
+  color: #2A4C3A;
 }
 .agntix-light .design-footer-widget-input input {
   color: var(--tp-common-black);
@@ -46441,7 +46448,7 @@ p.color-g {
   border-color: var(--tp-common-black-7);
 }
 .agntix-light .design-footer-widget-input-icon {
-  background-color: var(--tp-common-black-7);
+  background-color: #2A4C3A;
 }
 .agntix-light .design-footer-widget-info a {
   color: var(--tp-common-black);
@@ -48052,20 +48059,32 @@ p.color-g {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .agntix-light .tp-portfolio-masonry-grid-heading span {
-  color: var(--tp-common-black);
+  color: #2A4C3A;
 }
 .agntix-light .tp-portfolio-masonry-grid-heading span::after {
-  background-color: var(--tp-common-black);
+  background-color: #2A4C3A;
 }
 .agntix-light .tp-portfolio-masonry-grid-title {
-  color: var(--tp-common-black);
+  color: #2A4C3A;
+}
+.agntix-light .tp-portfolio-masonry-grid-title a {
+  color: #2A4C3A;
 }
 .agntix-light .tp-portfolio-masonry-grid-categories span {
   color: var(--tp-common-black);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.agntix-light .tp-portfolio-masonry-grid-categories span::after {
+  background-color: #2A4C3A;
+}
 .agntix-light .tp-btn-animation span {
   color: var(--tp-common-black);
+}
+.agntix-light .tp-portfolio-masonry-grid-bottom .tp-btn-animation span {
+  color: #2A4C3A;
+}
+.agntix-light .tp-portfolio-masonry-grid-bottom .tp-btn-animation span svg path {
+  stroke: #2A4C3A;
 }
 .agntix-light .tp-btn-animation {
   background: rgb(246, 246, 249);
