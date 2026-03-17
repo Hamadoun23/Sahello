@@ -1684,17 +1684,24 @@
 		color: var(--tp-common-black);
 	}
 	& .pp-footer-subtitle {
-		color: var(--tp-common-black);
+		color: var(--tp-common-white);
 	}
 	& .pp-footer-title {
-		color: var(--tp-common-black);
+		color: var(--tp-common-white);
+	}
+	& .pp-footer-title a {
+		color: var(--tp-common-white);
 	}
 	& .pp-footer-box {
-		background-color: var(--tp-common-yellow-1);
+		background: linear-gradient(135deg, #003d2a 0%, #2A4C3A 50%, #43D4A0 100%);
 	}
 	& .pp-footer-btn {
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		color: var(--tp-common-black);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		color: var(--tp-common-white);
+	}
+	& .pp-footer-btn:hover {
+		background-color: var(--tp-common-white);
+		color: #2A4C3A;
 	}
 	& .pp-footer-copyright-text p {
 		color: rgba($color: #141414, $alpha: 0.6);
@@ -2107,6 +2114,10 @@
 	& .tp-contact-category-btn {
 		border: 1px solid rgba(0, 0, 0, 0.08);
 		color: var(--tp-common-black);
+		&:hover, &.active {
+			background-color: #2A4C3A;
+			color: var(--tp-common-white);
+		}
 	}
 	& .tp-contact-me-interest-title {
 		color: var(--tp-common-black);
@@ -2507,4 +2518,36 @@
             }
         }
     }
+}
+
+/* Offcanvas Sa'Hello - dégradé blanc et vert */
+.tp-offcanvas-wrapper.tp-offcanvas-sahello {
+	background: linear-gradient(135deg, #ffffff 0%, #f0f9f7 30%, #d4ede6 60%, #a8e0d0 100%) !important;
+	& .logo-1 {
+		display: block !important;
+	}
+	& .logo-2 {
+		display: none !important;
+	}
+	& .tp-offcanvas-title,
+	& .tp-offcanvas-title.sm,
+	& .tp-offcanvas-content p,
+	& .tp-offcanvas-contact ul li a {
+		color: #2A4C3A !important;
+	}
+	& .tp-offcanvas-contact ul li a:hover {
+		color: #003d2a !important;
+	}
+	& .tp-offcanvas-social ul li a {
+		color: #2A4C3A !important;
+		border: 1px solid rgba(42, 76, 58, 0.3) !important;
+		&:hover {
+			color: var(--tp-common-white) !important;
+			background-color: #2A4C3A !important;
+			border-color: #2A4C3A !important;
+		}
+	}
+	& .tp-offcanvas-close-btn {
+		color: #2A4C3A !important;
+	}
 }

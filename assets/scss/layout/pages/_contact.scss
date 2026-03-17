@@ -182,8 +182,8 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             &:hover,
             &.active{
-                background-color: #FFF669;
-                color: var(--tp-common-black-7);
+                background-color: #2A4C3A;
+                color: var(--tp-common-white);
             }
             @media #{$xs} {
                 font-size: 16px;
@@ -649,7 +649,7 @@
                 position: relative;
                 padding-left: 20px;
                 text-transform: uppercase;
-                &::before{
+                    &::before{
                     position: absolute;
                     content: '';
                     top: 7px;
@@ -657,7 +657,7 @@
                     width: 8px;
                     height: 8px;
                     border-radius: 8px;
-                    background-color: #FFF669;
+                    background-color: #2A4C3A;
                 }
             }
         }
@@ -723,15 +723,15 @@
                         border-color: #1D1D1F;
                         color: var(--tp-common-white);
                         &:focus{
-                            border-color: #FFF669;
+                            border-color: #2A4C3A;
                             background-color: var(--tp-common-black-7);
                         }
                     }
                 }
                 &-btn{
                     & button{
-                        background-color: #FFF669;
-                        color: var(--tp-common-black-7);
+                        background-color: #2A4C3A;
+                        color: var(--tp-common-white);
                     }
                 }
             }
