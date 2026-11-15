@@ -83,6 +83,10 @@
         .header-sticky.tp-header-inner-style .tp-header-14-bar-wrap .tp-header-8-bar span svg path {
             fill: #2A4C3A !important;
         }
+        .tp-contact-form-input .sh-invalid { outline: 2px solid #c4320a; background: #fff8f6; }
+        .sh-contact-rule { font-size: 14px; color: #5f6a66; margin: -6px 0 20px; }
+        .sh-contact-rule.is-error { color: #c4320a; }
+        .ajax-response.error { color: #c4320a; }
     </style>
 
 </head>
@@ -322,25 +326,25 @@
                                                 <div class="col-lg-6">
                                                     <div class="tp-contact-form-input mb-20">
                                                         <label>Nom complet*</label>
-                                                        <input name="name" type="text">
+                                                        <input name="name" type="text" autocomplete="name">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="tp-contact-form-input mb-20">
-                                                        <label>Adresse email*</label>
-                                                        <input name="email" type="email">
+                                                        <label>Adresse email</label>
+                                                        <input name="email" type="email" autocomplete="email">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tp-contact-form-input mb-20">
                                                         <label>Téléphone</label>
-                                                        <input name="subject" type="text">
+                                                        <input name="subject" type="tel" autocomplete="tel" inputmode="tel">
                                                     </div>
+                                                    <p class="sh-contact-rule" id="sh-contact-rule">* Indiquez au moins votre email <strong>ou</strong> votre téléphone pour que nous puissions vous répondre.</p>
                                                 </div>
                                                 <div class="col-lg-12">
                                                     <div class="tp-contact-form-input mb-20">
-                                                        <label>How Can We Help You*
-                                                        </label>
+                                                        <label>Comment pouvons-nous vous aider&nbsp;?*</label>
                                                         <textarea name="message"></textarea>
                                                     </div>
                                                     <div class="tp-contact-form-btn">
@@ -415,7 +419,7 @@
                             <div class="col-lg-12">
                                 <div class="pp-footer-copyright-wrap">
                                     <div class="pp-footer-copyright-text">
-                                        <p>© 2025 SA'HELLO, Tous droits réservés</p>
+                                        <p>© 2026 SA'HELLO, Tous droits réservés</p>
                                     </div>
                                     <div class="pp-footer-copyright-text-center">
                                         <p>Agriculture écologique — Dio Ba, Kati, Mali</p>
@@ -454,6 +458,36 @@
     <script src="assets/js/purecounter.js"></script>
     <script src="assets/js/isotope-pkgd.js"></script>
     <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script>
+    /* Validation du formulaire de contact : nom + message obligatoires,
+       et au moins l'email OU le téléphone. S'exécute avant l'envoi AJAX. */
+    (function () {
+        var form = document.getElementById('contact-form');
+        if (!form) return;
+        var rule = document.getElementById('sh-contact-rule');
+        var msgBox = form.querySelector('.ajax-response');
+        function mark(el, bad) { el.classList.toggle('sh-invalid', bad); }
+        form.addEventListener('input', function (e) { mark(e.target, false); if (e.target.name === 'email' || e.target.name === 'subject') { mark(form.email, false); mark(form.subject, false); rule.classList.remove('is-error'); } });
+        document.addEventListener('submit', function (e) {
+            if (e.target !== form) return;
+            var nom = form.name.value.trim(), email = form.email.value.trim(), tel = form.subject.value.trim(), msg = form.message.value.trim();
+            var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+            var telOk = tel.replace(/\D/g, '').length >= 8;
+            var erreurs = [];
+            mark(form.name, !nom); if (!nom) erreurs.push('votre nom');
+            if (email && !emailOk) { mark(form.email, true); erreurs.push('un email valide'); }
+            if (tel && !telOk) { mark(form.subject, true); erreurs.push('un numéro de téléphone valide'); }
+            if (!emailOk && !telOk && !(email && !emailOk) && !(tel && !telOk)) { mark(form.email, true); mark(form.subject, true); rule.classList.add('is-error'); erreurs.push('un email ou un téléphone'); }
+            mark(form.message, !msg); if (!msg) erreurs.push('votre message');
+            if (erreurs.length) {
+                e.preventDefault(); e.stopImmediatePropagation(); e.stopPropagation();
+                msgBox.classList.remove('success'); msgBox.classList.add('error');
+                msgBox.textContent = "Merci d'indiquer " + erreurs.join(', ') + '.';
+                var first = form.querySelector('.sh-invalid'); if (first) first.focus();
+            }
+        }, true);
+    })();
+    </script>
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/Observer.min.js"></script>
     <script src="assets/js/splitting.min.js"></script>

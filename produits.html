@@ -106,66 +106,12 @@
             font-weight: 500;
             line-height: 1.5;
         }
-        /* ---------- Section Pour commander ---------- */
-        .sh-order { background: #edf4f2; padding: 120px 0; color: #0E0F11; }
-        .sh-order-head { max-width: 720px; margin-bottom: 50px; }
-        .sh-order-eyebrow { display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #005f41; margin-bottom: 12px; }
-        .sh-order-title { font-size: 60px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: #005f41; margin-bottom: 18px; }
-        .sh-order-intro { font-size: 19px; line-height: 1.55; color: #3b4440; margin: 0; }
-        .sh-order-grid { display: grid; grid-template-columns: minmax(0, 1fr) 400px; gap: 40px; align-items: start; }
-        .sh-cat { margin-bottom: 30px; }
-        .sh-cat h3 { font-size: 15px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #005f41; margin: 0 0 12px; }
-        .sh-prod { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #fff; border: 1px solid rgba(0, 95, 65, .12); border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; transition: border-color .2s; }
-        .sh-prod.is-on { border-color: #005f41; box-shadow: 0 0 0 1px #005f41 inset; }
-        .sh-prod-name { font-size: 17px; font-weight: 600; color: #0E0F11; margin: 0; }
-        .sh-prod-price { font-size: 14px; color: #5a6460; margin: 2px 0 0; }
-        .sh-prod-price.tbd { font-style: italic; }
-        .sh-qty { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-        .sh-qty button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid #005f41; background: #fff; color: #005f41; font-size: 20px; line-height: 1; display: grid; place-items: center; cursor: pointer; }
-        .sh-qty button:hover { background: #005f41; color: #fff; }
-        .sh-qty input[type=number] { width: 48px; height: 36px; line-height: 36px; padding: 0; text-align: center; border: 0; background: transparent; font-size: 17px; font-weight: 700; color: #0E0F11; -moz-appearance: textfield; }
-        .sh-qty input::-webkit-outer-spin-button, .sh-qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-        .sh-order-side { position: sticky; top: 110px; }
-        .sh-order-card { background: #fff; border-radius: 20px; padding: 28px; box-shadow: 0 20px 50px -30px rgba(0, 61, 42, .45); }
-        .sh-order-card h3 { font-size: 22px; font-weight: 700; color: #005f41; margin: 0 0 14px; }
-        .sh-order-recap { list-style: none; padding: 0; margin: 0 0 14px; font-size: 15px; color: #3b4440; }
-        .sh-order-recap li { display: flex; justify-content: space-between; gap: 10px; padding: 6px 0; border-bottom: 1px dashed rgba(0, 95, 65, .18); }
-        .sh-order-recap li.sh-order-empty { border: 0; font-style: italic; color: #7a8480; }
-        .sh-order-total { display: flex; justify-content: space-between; align-items: baseline; font-size: 16px; margin-bottom: 6px; }
-        .sh-order-total strong { font-size: 24px; color: #005f41; }
-        .sh-order-note { font-size: 13px; color: #7a5a00; background: #fff6dd; border-radius: 8px; padding: 8px 10px; margin: 6px 0 0; }
-        .sh-field { display: block; border: 0; padding: 0; margin: 18px 0 0; }
-        .sh-field > span, .sh-field legend { display: block; font-size: 14px; font-weight: 600; color: #0E0F11; margin-bottom: 6px; float: none; width: auto; }
-        .sh-field input[type=text], .sh-field input[type=tel], .sh-field textarea { width: 100%; height: 46px; line-height: normal; border: 1px solid rgba(0, 0, 0, .15); border-radius: 10px; padding: 10px 12px; font-size: 15px; background: #fff; color: #0E0F11; }
-        .sh-field textarea { height: auto; min-height: 70px; }
-        .sh-field input:focus, .sh-field textarea:focus { outline: 2px solid #005f41; outline-offset: 1px; border-color: transparent; }
-        .sh-tbd { font-style: normal; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #7a5a00; background: #fff6dd; border-radius: 999px; padding: 2px 8px; margin-left: 6px; vertical-align: middle; }
-        .sh-choices { display: flex; flex-wrap: wrap; gap: 8px; }
-        .sh-choices label { display: inline-flex; align-items: center; gap: 6px; border: 1px solid rgba(0, 95, 65, .3); border-radius: 999px; padding: 7px 14px; font-size: 14px; cursor: pointer; color: #0E0F11; margin: 0; }
-        .sh-choices input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; pointer-events: none; }
-        .sh-choices label { position: relative; }
-        .sh-choices label:has(input:focus-visible) { outline: 2px solid #005f41; outline-offset: 2px; }
-        .sh-choices label:has(input:checked) { background: #005f41; border-color: #005f41; color: #fff; }
-        .sh-order-error { color: #b42318; font-size: 14px; min-height: 1em; margin: 14px 0 0; }
-        .sh-order-submit { width: 100%; margin-top: 10px; border: 0; border-radius: 999px; background: #005f41; color: #fff; font-size: 16px; font-weight: 700; padding: 15px 20px; cursor: pointer; transition: background .2s; }
-        .sh-order-submit:hover { background: #003d2a; }
-        @media (max-width: 991px) {
-            .sh-order { padding: 80px 0; }
-            .sh-order-title { font-size: 44px; }
-            .sh-order-grid { grid-template-columns: 1fr; }
-            .sh-order-side { position: static; }
-        }
         @media (max-width: 767px) {
-            .sh-order { padding: 60px 0; }
-            .sh-order-title { font-size: 34px; }
-            .sh-order-intro { font-size: 16px; }
-            .sh-order-card { padding: 20px; }
-            .sh-prod { padding: 12px 14px; }
-            .sh-prod-name { font-size: 15px; }
             .tp-portfolio-masonry-top-right p.produits-accroche { font-size: 26px; }
             .tp-portfolio-masonry-top-right p:not(.produits-accroche) { font-size: 16px; }
         }
     </style>
+    <link rel="stylesheet" href="assets/css/commande.css">
 
 </head>
 
@@ -511,64 +457,120 @@
                 <!-- portfolio masonry grid end -->
 
                 <!-- pour commander start -->
-                <section class="sh-order" id="commander">
+                <section class="shc" id="commander">
                     <div class="container container-1230">
-                        <div class="sh-order-head">
-                            <span class="sh-order-eyebrow">Commande</span>
-                            <h2 class="sh-order-title">Pour commander&nbsp;!</h2>
-                            <p class="sh-order-intro">Choisissez vos produits et leurs quantités, indiquez vos coordonnées&nbsp;: votre commande nous est envoyée directement sur WhatsApp.</p>
+                        <div class="shc-head">
+                            <span class="shc-eyebrow">Commande</span>
+                            <h2 class="shc-title">Pour <span>commander&nbsp;!</span></h2>
+                            <p class="shc-sub">En 4 étapes simples : choisissez vos produits, indiquez vos coordonnées, votre mode de paiement, et envoyez votre commande sur WhatsApp.</p>
                         </div>
 
-                        <form class="sh-order-grid" id="sh-order-form" novalidate>
-                            <div class="sh-order-products" id="sh-order-products">
-                                <!-- rempli par le script à partir de la liste PRODUITS -->
+                        <div class="shc-card">
+                            <ol class="shc-steps" aria-label="Étapes de la commande">
+                                <li class="shc-step" data-step="1"><span class="shc-step-dot">1</span><span class="shc-step-label">Produits</span></li>
+                                <li class="shc-step" data-step="2"><span class="shc-step-dot">2</span><span class="shc-step-label">Livraison</span></li>
+                                <li class="shc-step" data-step="3"><span class="shc-step-dot">3</span><span class="shc-step-label">Paiement</span></li>
+                                <li class="shc-step" data-step="4"><span class="shc-step-dot">4</span><span class="shc-step-label">Confirmation</span></li>
+                            </ol>
+
+                            <div class="shc-body">
+                                <!-- Étape 1 -->
+                                <div class="shc-panel" data-step="1">
+                                    <h3 class="shc-panel-title">Choisissez vos produits</h3>
+                                    <p class="shc-panel-sub">Ajoutez les produits souhaités et ajustez les quantités.</p>
+                                    <div class="shc-filters" id="shc-filters"></div>
+                                    <div class="shc-grid" id="shc-grid"></div>
+                                </div>
+
+                                <!-- Étape 2 -->
+                                <div class="shc-panel" data-step="2">
+                                    <h3 class="shc-panel-title">Livraison &amp; coordonnées</h3>
+                                    <p class="shc-panel-sub">Comment souhaitez-vous recevoir votre commande&nbsp;?</p>
+                                    <p class="shc-tbd" id="shc-tbd-livraison">Les modalités de livraison (zones, frais, délais) vous seront confirmées par message.</p>
+                                    <div class="shc-options" id="shc-livraison"></div>
+                                    <div class="shc-fields">
+                                        <label class="shc-field">
+                                            <span>Nom complet</span>
+                                            <input type="text" id="shc-nom" autocomplete="name" placeholder="Ex. Aminata Traoré">
+                                            <em class="shc-field-error">Indiquez votre nom.</em>
+                                        </label>
+                                        <label class="shc-field">
+                                            <span>Téléphone / WhatsApp</span>
+                                            <input type="tel" id="shc-tel" autocomplete="tel" inputmode="tel" placeholder="+223 …">
+                                            <em class="shc-field-error">Numéro de téléphone invalide.</em>
+                                        </label>
+                                        <label class="shc-field full" id="shc-f-adresse">
+                                            <span>Adresse de livraison</span>
+                                            <input type="text" id="shc-adresse" autocomplete="street-address" placeholder="Quartier, rue, point de repère">
+                                            <em class="shc-field-error">Indiquez l'adresse de livraison.</em>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Étape 3 -->
+                                <div class="shc-panel" data-step="3">
+                                    <h3 class="shc-panel-title">Mode de paiement</h3>
+                                    <p class="shc-panel-sub">Choisissez comment vous souhaitez régler.</p>
+                                    <p class="shc-tbd" id="shc-tbd-paiement">Les moyens de paiement sont en cours de validation : nous vous confirmerons les modalités.</p>
+                                    <div class="shc-options" id="shc-paiement"></div>
+                                    <div class="shc-fields">
+                                        <label class="shc-field full">
+                                            <span>Remarque <small>(facultatif)</small></span>
+                                            <textarea id="shc-remarque" rows="3" placeholder="Horaire de livraison souhaité, précisions…"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Étape 4 -->
+                                <div class="shc-panel" data-step="4">
+                                    <h3 class="shc-panel-title">Vérifiez votre commande</h3>
+                                    <p class="shc-panel-sub">Tout est correct&nbsp;? Envoyez-la sur WhatsApp, nous vous répondons rapidement.</p>
+                                    <div class="shc-review">
+                                        <div class="shc-box">
+                                            <div class="shc-box-head"><h4>Produits</h4><button type="button" class="shc-edit" data-goto="1">Modifier</button></div>
+                                            <ul class="shc-lines" id="shc-recap-lignes"></ul>
+                                            <div class="shc-total-row"><span>Total estimé</span><strong id="shc-recap-total"></strong></div>
+                                            <p class="shc-total-note" id="shc-recap-note">Certains prix restent à confirmer : le montant définitif vous sera communiqué.</p>
+                                        </div>
+                                        <div>
+                                            <div class="shc-box">
+                                                <div class="shc-box-head"><h4>Vos informations</h4><button type="button" class="shc-edit" data-goto="2">Modifier</button></div>
+                                                <dl class="shc-dl" id="shc-recap-infos"></dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Confirmation -->
+                                <div class="shc-panel" id="shc-done">
+                                    <div class="shc-done">
+                                        <div class="shc-done-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
+                                        <h3>Merci pour votre commande&nbsp;!</h3>
+                                        <p>WhatsApp s'est ouvert avec votre commande. Il ne vous reste qu'à appuyer sur « Envoyer ». Nous vous confirmons rapidement la disponibilité et le montant.</p>
+                                        <button type="button" class="shc-btn shc-btn-primary" id="shc-restart">Nouvelle commande</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <aside class="sh-order-side">
-                                <div class="sh-order-card">
-                                    <h3>Votre commande</h3>
-                                    <ul class="sh-order-recap" id="sh-order-recap">
-                                        <li class="sh-order-empty">Aucun produit sélectionné.</li>
-                                    </ul>
-                                    <div class="sh-order-total">
-                                        <span>Total estimé</span>
-                                        <strong id="sh-order-total">0 FCFA</strong>
+                            <p class="shc-hint" id="shc-hint" role="alert"></p>
+                            <div class="shc-foot" id="shc-foot">
+                                <div class="shc-cart">
+                                    <div class="shc-cart-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                        <span class="shc-cart-count" id="shc-cart-count">0</span>
                                     </div>
-                                    <p class="sh-order-note" id="sh-order-note" hidden>Certains prix restent à confirmer : le total définitif vous sera communiqué.</p>
-
-                                    <label class="sh-field">
-                                        <span>Nom complet</span>
-                                        <input type="text" name="nom" required autocomplete="name">
-                                    </label>
-                                    <label class="sh-field">
-                                        <span>Téléphone</span>
-                                        <input type="tel" name="tel" required autocomplete="tel" placeholder="+223 …">
-                                    </label>
-
-                                    <fieldset class="sh-field">
-                                        <legend>Mode de livraison <em class="sh-tbd">à renseigner</em></legend>
-                                        <div class="sh-choices" id="sh-livraison"></div>
-                                    </fieldset>
-                                    <label class="sh-field" id="sh-adresse-wrap">
-                                        <span>Adresse / quartier de livraison</span>
-                                        <input type="text" name="adresse" autocomplete="street-address">
-                                    </label>
-
-                                    <fieldset class="sh-field">
-                                        <legend>Mode de paiement <em class="sh-tbd">à déterminer</em></legend>
-                                        <div class="sh-choices" id="sh-paiement"></div>
-                                    </fieldset>
-
-                                    <label class="sh-field">
-                                        <span>Remarque (facultatif)</span>
-                                        <textarea name="remarque" rows="2"></textarea>
-                                    </label>
-
-                                    <p class="sh-order-error" id="sh-order-error" role="alert"></p>
-                                    <button type="submit" class="sh-order-submit">Envoyer ma commande sur WhatsApp</button>
+                                    <div class="shc-cart-text" id="shc-cart-text"></div>
                                 </div>
-                            </aside>
-                        </form>
+                                <div class="shc-nav">
+                                    <button type="button" class="shc-btn shc-btn-ghost" id="shc-prev" aria-label="Étape précédente">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><span class="shc-btn-txt">Retour</span>
+                                    </button>
+                                    <button type="button" class="shc-btn shc-btn-primary" id="shc-next">
+                                        <span class="shc-btn-txt">Continuer</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- pour commander end -->
@@ -704,161 +706,7 @@
     <!-- JS here -->
     <!-- JS here -->
 
-    <!-- Section Pour commander -->
-    <script>
-    (function () {
-        /* ============================================================
-           À COMPLÉTER PAR SA'HELLO
-           - prix : en FCFA, par unité. null = « Prix à confirmer ».
-           - LIVRAISON / PAIEMENT : options provisoires, à remplacer.
-           ============================================================ */
-        var WHATSAPP = '22372707914';
-        var PRODUITS = [
-            { cat: 'Maraîchage', items: [
-                { nom: 'Tomate',          unite: 'kg',    prix: null },
-                { nom: 'Gombo',           unite: 'kg',    prix: null },
-                { nom: 'Oignons frais',   unite: 'kg',    prix: null },
-                { nom: 'Aubergines',      unite: 'kg',    prix: null },
-                { nom: 'Piment',          unite: 'kg',    prix: null }
-            ]},
-            { cat: 'Pisciculture', items: [
-                { nom: 'Tilapia frais',      unite: 'kg', prix: null },
-                { nom: 'Poisson-chat frais', unite: 'kg', prix: null },
-                { nom: 'Poisson fumé',       unite: 'kg', prix: null }
-            ]},
-            { cat: 'Aviculture', items: [
-                { nom: 'Poulet frais',    unite: 'pièce',         prix: null },
-                { nom: 'Poulet fumé',     unite: 'pièce',         prix: null },
-                { nom: 'Œufs',            unite: 'plateau de 30', prix: null }
-            ]},
-            { cat: 'Transformation', items: [
-                { nom: 'Miel',             unite: 'pot', prix: null },
-                { nom: 'Beurre de karité', unite: 'pot', prix: null }
-            ]}
-        ];
-        var LIVRAISON = [
-            { label: 'Livraison à domicile', adresse: true },
-            { label: 'Retrait sur place',    adresse: false }
-        ];
-        var PAIEMENT = ['Espèces', 'Orange Money', 'Moov Money'];
-        /* ============================================================ */
-
-        var form = document.getElementById('sh-order-form');
-        if (!form) return;
-        var box = document.getElementById('sh-order-products');
-        var recap = document.getElementById('sh-order-recap');
-        var totalEl = document.getElementById('sh-order-total');
-        var noteEl = document.getElementById('sh-order-note');
-        var errEl = document.getElementById('sh-order-error');
-        var adresseWrap = document.getElementById('sh-adresse-wrap');
-        var lignes = [];
-
-        function fcfa(n) { return n.toLocaleString('fr-FR').replace(/ | /g, ' ') + ' FCFA'; }
-        function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-
-        PRODUITS.forEach(function (groupe) {
-            var sec = document.createElement('div');
-            sec.className = 'sh-cat';
-            sec.innerHTML = '<h3>' + esc(groupe.cat) + '</h3>';
-            groupe.items.forEach(function (p) {
-                var row = document.createElement('div');
-                row.className = 'sh-prod';
-                var prixTxt = p.prix != null ? fcfa(p.prix) + ' / ' + p.unite : 'Prix à confirmer · par ' + p.unite;
-                row.innerHTML =
-                    '<div><p class="sh-prod-name">' + esc(p.nom) + '</p>' +
-                    '<p class="sh-prod-price' + (p.prix == null ? ' tbd' : '') + '">' + esc(prixTxt) + '</p></div>' +
-                    '<div class="sh-qty">' +
-                        '<button type="button" aria-label="Retirer un ' + esc(p.nom) + '">−</button>' +
-                        '<input type="number" min="0" max="999" step="1" value="0" inputmode="numeric" aria-label="Quantité ' + esc(p.nom) + ' (' + esc(p.unite) + ')">' +
-                        '<button type="button" aria-label="Ajouter un ' + esc(p.nom) + '">+</button>' +
-                    '</div>';
-                var input = row.querySelector('input');
-                var btns = row.querySelectorAll('button');
-                btns[0].addEventListener('click', function () { input.value = Math.max(0, (+input.value || 0) - 1); maj(); });
-                btns[1].addEventListener('click', function () { input.value = Math.min(999, (+input.value || 0) + 1); maj(); });
-                input.addEventListener('input', maj);
-                lignes.push({ p: p, input: input, row: row });
-                sec.appendChild(row);
-            });
-            box.appendChild(sec);
-        });
-
-        function radios(id, name, options) {
-            var el = document.getElementById(id);
-            options.forEach(function (o, i) {
-                var label = typeof o === 'string' ? o : o.label;
-                var l = document.createElement('label');
-                l.innerHTML = '<input type="radio" name="' + name + '" value="' + esc(label) + '"' + (i === 0 ? ' checked' : '') + '> ' + esc(label);
-                el.appendChild(l);
-            });
-        }
-        radios('sh-livraison', 'livraison', LIVRAISON);
-        radios('sh-paiement', 'paiement', PAIEMENT);
-
-        function livraisonChoisie() {
-            var v = (form.querySelector('input[name="livraison"]:checked') || {}).value;
-            return LIVRAISON.filter(function (o) { return o.label === v; })[0];
-        }
-        function majAdresse() {
-            var l = livraisonChoisie();
-            adresseWrap.hidden = !(l && l.adresse);
-        }
-        form.addEventListener('change', function (e) { if (e.target.name === 'livraison') majAdresse(); });
-        majAdresse();
-
-        function choix() {
-            return lignes.map(function (l) {
-                var q = Math.max(0, Math.min(999, Math.floor(+l.input.value || 0)));
-                return { p: l.p, q: q, row: l.row };
-            });
-        }
-
-        function maj() {
-            var total = 0, inconnu = false, html = '';
-            choix().forEach(function (c) {
-                c.row.classList.toggle('is-on', c.q > 0);
-                if (!c.q) return;
-                var montant = c.p.prix != null ? c.p.prix * c.q : null;
-                if (montant == null) inconnu = true; else total += montant;
-                html += '<li><span>' + esc(c.p.nom) + ' × ' + c.q + ' ' + esc(c.p.unite) + '</span><span>' + (montant != null ? fcfa(montant) : 'à confirmer') + '</span></li>';
-            });
-            recap.innerHTML = html || '<li class="sh-order-empty">Aucun produit sélectionné.</li>';
-            totalEl.textContent = (inconnu && total === 0) ? 'À confirmer' : fcfa(total) + (inconnu ? ' *' : '');
-            noteEl.hidden = !inconnu;
-        }
-
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            errEl.textContent = '';
-            var items = choix().filter(function (c) { return c.q > 0; });
-            var nom = form.nom.value.trim(), tel = form.tel.value.trim(), adresse = form.adresse.value.trim();
-            var liv = livraisonChoisie();
-            if (!items.length) { errEl.textContent = 'Ajoutez au moins un produit.'; return; }
-            if (!nom || !tel) { errEl.textContent = 'Indiquez votre nom et votre téléphone.'; return; }
-            if (liv && liv.adresse && !adresse) { errEl.textContent = 'Indiquez l’adresse de livraison.'; form.adresse.focus(); return; }
-
-            var total = 0, inconnu = false;
-            var msg = ['Bonjour SA\'HELLO, je souhaite passer commande :', ''];
-            items.forEach(function (c) {
-                var m = c.p.prix != null ? c.p.prix * c.q : null;
-                if (m == null) inconnu = true; else total += m;
-                msg.push('- ' + c.p.nom + ' : ' + c.q + ' ' + c.p.unite + (m != null ? ' (' + fcfa(m) + ')' : ''));
-            });
-            msg.push('');
-            msg.push('Total estimé : ' + fcfa(total) + (inconnu ? ' (hors prix à confirmer)' : ''));
-            msg.push('');
-            msg.push('Nom : ' + nom);
-            msg.push('Téléphone : ' + tel);
-            msg.push('Livraison : ' + (liv ? liv.label : '-') + (liv && liv.adresse ? ' — ' + adresse : ''));
-            msg.push('Paiement : ' + ((form.querySelector('input[name="paiement"]:checked') || {}).value || '-'));
-            if (form.remarque.value.trim()) msg.push('Remarque : ' + form.remarque.value.trim());
-
-            window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg.join('\n')), '_blank', 'noopener');
-        });
-
-        maj();
-    })();
-    </script>
+    <script src="assets/js/commande.js"></script>
 </body>
 
 </html>

@@ -114,108 +114,76 @@
         .agntix-light .tp-offcanvas-2-area.offcanvas-2-white-bg .tp-offcanvas-menu .tp-submenu li a:hover {
             color: #2A4C3A !important;
         }
-        /* Hero : accroche en gros caractères + liste des activités */
+        /* Hero : accroche en gros caractères + activités en pastilles */
         .design-hero-content p.hero-accroche {
-            font-size: 40px;
+            font-size: 34px;
             font-weight: 700;
             line-height: 1.15;
-            margin-bottom: 22px;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            max-width: 520px;
         }
         .design-hero-content .hero-activites {
             list-style: none;
             padding: 0;
-            margin: 0 0 35px;
-        }
-        .design-hero-content .hero-activites li {
-            position: relative;
-            padding-left: 22px;
-            font-size: 21px;
-            font-weight: 500;
-            line-height: 1.6;
-            color: #e0eeee;
-        }
-        .design-hero-content .hero-activites li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: .68em;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background: currentColor;
+            margin: 0 0 32px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
         }
         .agntix-light .design-hero-content .hero-activites li,
         .design-hero-content .hero-activites li {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
             color: #ffffff;
+            padding: 8px 13px;
+            border: 1px solid rgba(255, 255, 255, .45);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            white-space: nowrap;
         }
         @media (max-width: 991px) {
-            .design-hero-content p.hero-accroche { font-size: 32px; }
+            .design-hero-content p.hero-accroche { font-size: 30px; }
         }
         /* Section Qui sommes-nous */
-        .sahello-about {
-            padding: 160px 0 40px;
-        }
-        .sahello-about-eyebrow {
-            display: inline-block;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: .12em;
-            text-transform: uppercase;
-            color: #2A4C3A;
-            margin-bottom: 14px;
-        }
-        .sahello-about-title {
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 1.02;
-            letter-spacing: -0.03em;
-            color: #2A4C3A;
-            margin-bottom: 40px;
-        }
-        .sahello-about p {
-            font-size: 19px;
-            line-height: 1.65;
-            color: #3b4440;
-            margin-bottom: 20px;
-        }
-        .sahello-about p.sahello-about-lead {
-            font-size: 26px;
-            font-weight: 600;
-            line-height: 1.35;
-            letter-spacing: -0.01em;
-            color: #0E0F11;
-            margin-bottom: 28px;
-        }
-        .sahello-about p.sahello-about-femmes {
-            margin: 32px 0 0;
-            padding: 22px 26px;
-            border-left: 4px solid #2A4C3A;
-            background: rgba(42, 76, 58, 0.07);
-            border-radius: 0 12px 12px 0;
-            font-weight: 600;
-            color: #2A4C3A;
-        }
-        .sahello-about p.sahello-about-signature {
-            margin-top: 28px;
-            font-size: 22px;
-            font-style: italic;
-            font-weight: 600;
-            color: #0E0F11;
-        }
-        @media (min-width: 992px) {
-            .sahello-about .col-lg-5 > div { position: sticky; top: 120px; }
-        }
+        .sh-about { padding: 140px 0 120px; background: #fff; }
+        .sh-about-head { max-width: 860px; margin: 0 auto 70px; text-align: center; }
+        .sh-about-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #005f41; margin-bottom: 18px; }
+        .sh-about-eyebrow::before, .sh-about-eyebrow::after { content: ""; width: 28px; height: 1px; background: currentColor; opacity: .5; }
+        .sh-about-title { font-size: 52px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: #0E0F11; margin-bottom: 26px; }
+        .sh-about-title span { color: #005f41; white-space: nowrap; }
+        .sh-about-lead { font-size: 22px; line-height: 1.5; color: #3b4440; margin: 0; }
+        .sh-about-body { display: grid; grid-template-columns: 5fr 6fr; gap: 70px; align-items: start; }
+        .sh-about-photo { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 5; }
+        .sh-about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .sh-about-badge { position: absolute; left: 20px; bottom: 20px; background: rgba(255,255,255,.95); border-radius: 14px; padding: 12px 16px; font-size: 14px; line-height: 1.3; color: #0E0F11; }
+        .sh-about-badge strong { display: block; font-size: 20px; color: #005f41; }
+        .sh-about-text p { font-size: 18px; line-height: 1.7; color: #4a5450; margin-bottom: 22px; }
+        .sh-about-band { margin-top: 80px; background: #005f41; color: #fff; border-radius: 28px; padding: 56px 64px; display: grid; grid-template-columns: auto 1fr; gap: 50px; align-items: center; }
+        .sh-about-band h3 { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #bfe3d3; margin: 0; white-space: nowrap; }
+        .sh-about-band p { font-size: 23px; line-height: 1.45; font-weight: 500; color: #fff; margin: 0; }
+        .sh-about-sign { text-align: center; max-width: 760px; margin: 50px auto 0; font-size: 20px; font-style: italic; line-height: 1.5; color: #005f41; }
         @media (max-width: 991px) {
-            .sahello-about { padding: 100px 0 20px; }
-            .sahello-about-title { font-size: 46px; margin-bottom: 28px; }
+            .sh-about { padding: 90px 0 80px; }
+            .sh-about-title { font-size: 40px; }
+            .sh-about-lead { font-size: 19px; }
+            .sh-about-body { grid-template-columns: 1fr; gap: 40px; }
+            .sh-about-photo { aspect-ratio: 16 / 10; }
+            .sh-about-band { grid-template-columns: 1fr; gap: 16px; padding: 40px; margin-top: 50px; }
+            .sh-about-band p { font-size: 20px; }
         }
         @media (max-width: 767px) {
-            .sahello-about { padding: 70px 0 10px; }
-            .sahello-about-title { font-size: 36px; }
-            .sahello-about p { font-size: 16px; }
-            .sahello-about p.sahello-about-lead { font-size: 20px; }
+            .sh-about { padding: 70px 0 60px; }
+            .sh-about-head { margin-bottom: 40px; }
+            .sh-about-title { font-size: 34px; }
+            .sh-about-lead { font-size: 17px; }
+            .sh-about-text p { font-size: 16px; }
+            .sh-about-band { padding: 30px 24px; border-radius: 20px; }
+            .sh-about-band p { font-size: 18px; }
+            .sh-about-sign { font-size: 17px; }
             .design-hero-content p.hero-accroche { font-size: 26px; }
-            .design-hero-content .hero-activites li { font-size: 17px; }
+            .design-hero-content .hero-activites li { font-size: 14px; padding: 8px 12px; }
         }
     </style>
 
@@ -471,7 +439,7 @@
                         <div class="design-hero-content-wrap mb-110 z-index-5">
                             <div class="container container-1230">
                                 <div class="row">
-                                    <div class="offset-xl-7 offset-lg-6 col-xl-5 col-lg-6">
+                                    <div class="offset-xl-6 offset-lg-5 col-xl-6 col-lg-7">
                                         <div class="design-hero-content tp_text_anim">
                                             <p class="hero-accroche">
                                                 Des produits frais et sains dans votre assiette toute l'année.
@@ -627,19 +595,22 @@
                 <!-- video area end -->
 
                 <!-- qui sommes-nous start -->
-                <section class="sahello-about" id="qui-sommes-nous">
+                <section class="sh-about" id="qui-sommes-nous">
                     <div class="container container-1230">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div>
-                                    <span class="sahello-about-eyebrow">À propos</span>
-                                    <h2 class="sahello-about-title">Qui <span style="white-space:nowrap">sommes-nous&nbsp;?</span></h2>
-                                </div>
+                        <div class="sh-about-head">
+                            <span class="sh-about-eyebrow">À propos</span>
+                            <h2 class="sh-about-title">Qui <span>sommes-nous&nbsp;?</span></h2>
+                            <p class="sh-about-lead">
+                                SA'HELLO est né d'un rêve&nbsp;: celui de faire de la terre une source durable de richesse, de contribuer à l'autonomisation des femmes et de participer au développement d'une agriculture locale plus forte et mieux valorisée.
+                            </p>
+                        </div>
+
+                        <div class="sh-about-body">
+                            <div class="sh-about-photo">
+                                <img src="assetsahello/accueil/banner4.png" alt="Femmes au travail dans les champs de SA'HELLO" loading="lazy">
+                                <div class="sh-about-badge"><strong>Dio Ba, Mali</strong>Agriculture locale &amp; écologique</div>
                             </div>
-                            <div class="col-lg-7">
-                                <p class="sahello-about-lead">
-                                    SA'HELLO est né d'un rêve&nbsp;: celui de faire de la terre une source durable de richesse, de contribuer à l'autonomisation des femmes et de participer au développement d'une agriculture locale plus forte et mieux valorisée.
-                                </p>
+                            <div class="sh-about-text">
                                 <p>
                                     Tout a commencé avec nos propres moyens, portés par une conviction simple&nbsp;: les richesses de notre terre méritent d'être mieux exploitées et accessibles au plus grand nombre. Aujourd'hui, nous souhaitons aller plus loin, toucher davantage de foyers et de commerces maliens, avec l'ambition de faire rayonner notre initiative à l'échelle de la sous-région.
                                 </p>
@@ -652,14 +623,15 @@
                                 <p>
                                     Nous voulons contribuer à changer cette réalité en créant un lien plus direct et plus équitable entre producteurs et consommateurs&nbsp;: mieux valoriser les récoltes, offrir de meilleurs débouchés aux agriculteurs et proposer aux foyers des produits locaux de qualité à des prix raisonnables.
                                 </p>
-                                <p class="sahello-about-femmes">
-                                    Notre ambition&nbsp;: construire un modèle dans lequel les producteurs vivent dignement de leur travail, les consommateurs accèdent à une alimentation saine et abordable, et les richesses de notre terre deviennent un véritable moteur de développement pour nos communautés.
-                                </p>
-                                <p class="sahello-about-signature">
-                                    SA'HELLO, c'est notre manière de croire au potentiel de notre terre et à celles et ceux qui la font vivre.
-                                </p>
                             </div>
                         </div>
+
+                        <div class="sh-about-band">
+                            <h3>Notre ambition</h3>
+                            <p>Construire un modèle dans lequel les producteurs vivent dignement de leur travail, les consommateurs accèdent à une alimentation saine et abordable, et les richesses de notre terre deviennent un véritable moteur de développement pour nos communautés.</p>
+                        </div>
+
+                        <p class="sh-about-sign">SA'HELLO, c'est notre manière de croire au potentiel de notre terre et à celles et ceux qui la font vivre.</p>
                     </div>
                 </section>
                 <!-- qui sommes-nous end -->
