@@ -87,6 +87,7 @@
         .sh-contact-rule { font-size: 14px; color: #5f6a66; margin: -6px 0 20px; }
         .sh-contact-rule.is-error { color: #c4320a; }
         .ajax-response.error { color: #c4320a; }
+        .ajax-response.success { color: #005f41; }
     </style>
 
 </head>
@@ -321,7 +322,7 @@
                                     <h3 class="tp-contact-me-interest-title">Demande d'information</h3>
 
                                     <div class="tp-contact-me-interest-form-wrap">
-                                        <form id="contact-form" action="assets/mail.php" method="POST">
+                                        <form id="contact-form" novalidate>
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <div class="tp-contact-form-input mb-20">
@@ -460,7 +461,7 @@
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script>
     /* Validation du formulaire de contact : nom + message obligatoires,
-       et au moins l'email OU le téléphone. S'exécute avant l'envoi AJAX. */
+       et au moins l'email OU le téléphone. Envoi via WhatsApp. */
     (function () {
         var form = document.getElementById('contact-form');
         if (!form) return;
@@ -479,16 +480,24 @@
             if (tel && !telOk) { mark(form.subject, true); erreurs.push('un numéro de téléphone valide'); }
             if (!emailOk && !telOk && !(email && !emailOk) && !(tel && !telOk)) { mark(form.email, true); mark(form.subject, true); rule.classList.add('is-error'); erreurs.push('un email ou un téléphone'); }
             mark(form.message, !msg); if (!msg) erreurs.push('votre message');
+            e.preventDefault(); e.stopImmediatePropagation(); e.stopPropagation();
             if (erreurs.length) {
-                e.preventDefault(); e.stopImmediatePropagation(); e.stopPropagation();
                 msgBox.classList.remove('success'); msgBox.classList.add('error');
                 msgBox.textContent = "Merci d'indiquer " + erreurs.join(', ') + '.';
                 var first = form.querySelector('.sh-invalid'); if (first) first.focus();
+                return;
             }
+            /* Site statique (pas de PHP) : la demande part sur WhatsApp */
+            var texte = ["Bonjour SA'HELLO, voici ma demande d'information :", '', msg, '', 'Nom : ' + nom];
+            if (email) texte.push('Email : ' + email);
+            if (tel) texte.push('Téléphone : ' + tel);
+            window.open('https://wa.me/22372707914?text=' + encodeURIComponent(texte.join('\n')), '_blank', 'noopener');
+            msgBox.classList.remove('error'); msgBox.classList.add('success');
+            msgBox.textContent = 'Merci ! WhatsApp s’est ouvert avec votre message : appuyez sur « Envoyer » pour nous le transmettre.';
+            form.reset();
         }, true);
     })();
     </script>
-    <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/Observer.min.js"></script>
     <script src="assets/js/splitting.min.js"></script>
     <script src="assets/js/webgl.js"></script>
