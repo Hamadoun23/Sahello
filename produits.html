@@ -459,117 +459,21 @@
                 <!-- pour commander start -->
                 <section class="shc" id="commander">
                     <div class="container container-1230">
-                        <div class="shc-head">
-                            <span class="shc-eyebrow">Commande</span>
-                            <h2 class="shc-title">Pour <span>commander&nbsp;!</span></h2>
-                            <p class="shc-sub">En 4 étapes simples : choisissez vos produits, indiquez vos coordonnées, votre mode de paiement, et envoyez votre commande sur WhatsApp.</p>
-                        </div>
-
-                        <div class="shc-card">
-                            <ol class="shc-steps" aria-label="Étapes de la commande">
-                                <li class="shc-step" data-step="1"><span class="shc-step-dot">1</span><span class="shc-step-label">Produits</span></li>
-                                <li class="shc-step" data-step="2"><span class="shc-step-dot">2</span><span class="shc-step-label">Livraison</span></li>
-                                <li class="shc-step" data-step="3"><span class="shc-step-dot">3</span><span class="shc-step-label">Paiement</span></li>
-                                <li class="shc-step" data-step="4"><span class="shc-step-dot">4</span><span class="shc-step-label">Confirmation</span></li>
-                            </ol>
-
-                            <div class="shc-body">
-                                <!-- Étape 1 -->
-                                <div class="shc-panel" data-step="1">
-                                    <h3 class="shc-panel-title">Choisissez vos produits</h3>
-                                    <p class="shc-panel-sub">Ajoutez les produits souhaités et ajustez les quantités.</p>
-                                    <div class="shc-filters" id="shc-filters"></div>
-                                    <div class="shc-grid" id="shc-grid"></div>
+                        <div class="shc-wrap">
+                            <div class="shc-head">
+                                <div>
+                                    <p class="shc-kicker">Commande</p>
+                                    <h2 class="shc-title">Pour commander&nbsp;!</h2>
                                 </div>
-
-                                <!-- Étape 2 -->
-                                <div class="shc-panel" data-step="2">
-                                    <h3 class="shc-panel-title">Livraison &amp; coordonnées</h3>
-                                    <p class="shc-panel-sub">Comment souhaitez-vous recevoir votre commande&nbsp;?</p>
-                                    <p class="shc-tbd" id="shc-tbd-livraison">Les modalités de livraison (zones, frais, délais) vous seront confirmées par message.</p>
-                                    <div class="shc-options" id="shc-livraison"></div>
-                                    <div class="shc-fields">
-                                        <label class="shc-field">
-                                            <span>Nom complet</span>
-                                            <input type="text" id="shc-nom" autocomplete="name" placeholder="Ex. Aminata Traoré">
-                                            <em class="shc-field-error">Indiquez votre nom.</em>
-                                        </label>
-                                        <label class="shc-field">
-                                            <span>Téléphone / WhatsApp</span>
-                                            <input type="tel" id="shc-tel" autocomplete="tel" inputmode="tel" placeholder="+223 …">
-                                            <em class="shc-field-error">Numéro de téléphone invalide.</em>
-                                        </label>
-                                        <label class="shc-field full" id="shc-f-adresse">
-                                            <span>Adresse de livraison</span>
-                                            <input type="text" id="shc-adresse" autocomplete="street-address" placeholder="Quartier, rue, point de repère">
-                                            <em class="shc-field-error">Indiquez l'adresse de livraison.</em>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <!-- Étape 3 -->
-                                <div class="shc-panel" data-step="3">
-                                    <h3 class="shc-panel-title">Mode de paiement</h3>
-                                    <p class="shc-panel-sub">Choisissez comment vous souhaitez régler.</p>
-                                    <p class="shc-tbd" id="shc-tbd-paiement">Les moyens de paiement sont en cours de validation : nous vous confirmerons les modalités.</p>
-                                    <div class="shc-options" id="shc-paiement"></div>
-                                    <div class="shc-fields">
-                                        <label class="shc-field full">
-                                            <span>Remarque <small>(facultatif)</small></span>
-                                            <textarea id="shc-remarque" rows="3" placeholder="Horaire de livraison souhaité, précisions…"></textarea>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <!-- Étape 4 -->
-                                <div class="shc-panel" data-step="4">
-                                    <h3 class="shc-panel-title">Vérifiez votre commande</h3>
-                                    <p class="shc-panel-sub">Tout est correct&nbsp;? Envoyez-la sur WhatsApp, nous vous répondons rapidement.</p>
-                                    <div class="shc-review">
-                                        <div class="shc-box">
-                                            <div class="shc-box-head"><h4>Produits</h4><button type="button" class="shc-edit" data-goto="1">Modifier</button></div>
-                                            <ul class="shc-lines" id="shc-recap-lignes"></ul>
-                                            <div class="shc-total-row"><span>Total estimé</span><strong id="shc-recap-total"></strong></div>
-                                            <p class="shc-total-note" id="shc-recap-note">Certains prix restent à confirmer : le montant définitif vous sera communiqué.</p>
-                                        </div>
-                                        <div>
-                                            <div class="shc-box">
-                                                <div class="shc-box-head"><h4>Vos informations</h4><button type="button" class="shc-edit" data-goto="2">Modifier</button></div>
-                                                <dl class="shc-dl" id="shc-recap-infos"></dl>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Confirmation -->
-                                <div class="shc-panel" id="shc-done">
-                                    <div class="shc-done">
-                                        <div class="shc-done-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></div>
-                                        <h3>Merci pour votre commande&nbsp;!</h3>
-                                        <p>WhatsApp s'est ouvert avec votre commande. Il ne vous reste qu'à appuyer sur « Envoyer ». Nous vous confirmons rapidement la disponibilité et le montant.</p>
-                                        <button type="button" class="shc-btn shc-btn-primary" id="shc-restart">Nouvelle commande</button>
-                                    </div>
-                                </div>
+                                <ol class="shc-how">
+                                    <li><b>1</b>Choisissez</li>
+                                    <li><b>2</b>Vos coordonnées</li>
+                                    <li><b>3</b>Envoi WhatsApp</li>
+                                </ol>
                             </div>
-
-                            <p class="shc-hint" id="shc-hint" role="alert"></p>
-                            <div class="shc-foot" id="shc-foot">
-                                <div class="shc-cart">
-                                    <div class="shc-cart-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-                                        <span class="shc-cart-count" id="shc-cart-count">0</span>
-                                    </div>
-                                    <div class="shc-cart-text" id="shc-cart-text"></div>
-                                </div>
-                                <div class="shc-nav">
-                                    <button type="button" class="shc-btn shc-btn-ghost" id="shc-prev" aria-label="Étape précédente">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg><span class="shc-btn-txt">Retour</span>
-                                    </button>
-                                    <button type="button" class="shc-btn shc-btn-primary" id="shc-next">
-                                        <span class="shc-btn-txt">Continuer</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-                                    </button>
-                                </div>
-                            </div>
+                            <div class="shc-tabs" role="tablist" aria-label="Catégories"></div>
+                            <div class="shc-list"></div>
+                            <div class="shc-bar is-empty" aria-live="polite"></div>
                         </div>
                     </div>
                 </section>
