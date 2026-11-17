@@ -78,7 +78,8 @@
   var KEY = 'sahello-boutique';
   var st = { view: 'home', cat: null, prod: null, q: '', cart: {}, jour: 0, creneau: 0, livraison: LIVRAISON[0].id, paiement: PAIEMENT[0].id, nom: '', tel: '', adresse: '', remarque: '' };
   try { var sv = JSON.parse(localStorage.getItem(KEY) || 'null'); if (sv) ['cart', 'livraison', 'paiement', 'nom', 'tel', 'adresse'].forEach(function (k) { if (sv[k] != null) st[k] = sv[k]; }); } catch (e) {}
-  function save() { try { localStorage.setItem(KEY, JSON.stringify({ cart: st.cart, livraison: st.livraison, paiement: st.paiement, nom: st.nom, tel: st.tel, adresse: st.adresse })); } catch (e) {} }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify({ cart: st.cart, livraison: st.livraison, paiement: st.paiement, nom: st.nom, tel: st.tel, adresse: st.adresse })); } catch (e) {}
+    try { document.dispatchEvent(new CustomEvent('sahello:panier')); } catch (e) {} }
 
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
   function fcfa(n) { return n.toLocaleString('fr-FR').replace(/ | /g, ' ') + ' FCFA'; }
@@ -331,5 +332,14 @@
   function ouvrirWA() { if (lastMsg) window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(lastMsg), '_blank', 'noopener'); }
 
   badge();
-  show('home', { noScroll: true });
+  /* commander.html#panier (bouton panier du menu) ouvre directement le panier */
+  function depuisAdresse(scroll) {
+    if (location.hash === '#panier') show('cart', { noScroll: !scroll });
+    else if (location.hash === '#produits') { st.cat = null; show('cat', { noScroll: !scroll }); }
+    else return false;
+    return true;
+  }
+  if (!depuisAdresse(false)) show('home', { noScroll: true });
+  else setTimeout(toTop, 700); /* attendre le défilement doux du thème */
+  window.addEventListener('hashchange', function () { depuisAdresse(true); });
 })();

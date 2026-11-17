@@ -110,9 +110,23 @@
             .tp-portfolio-masonry-top-right p.produits-accroche { font-size: 26px; }
             .tp-portfolio-masonry-top-right p:not(.produits-accroche) { font-size: 16px; }
         }
+        /* appel vers la page Commander */
+        .sh-cmd-cta { padding: 40px 0 110px; }
+        .sh-cmd-box { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;
+            padding: 44px 48px; border-radius: 28px; background: #0b4a35; color: #fff; }
+        .sh-cmd-k { margin: 0 0 6px; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #9fd8bf; }
+        .sh-cmd-h { margin: 0 0 10px; font-size: 44px; line-height: 1.05; color: #fff; }
+        .sh-cmd-p { margin: 0; max-width: 560px; font-size: 17px; line-height: 1.5; color: rgba(255,255,255,.85); }
+        .sh-cmd-box .sh-cmd-btn { display: inline-flex; height: 56px; padding: 0 30px; font-size: 16px; }
+        @media (max-width: 767px) {
+            .sh-cmd-cta { padding: 20px 0 70px; }
+            .sh-cmd-box { padding: 30px 24px; border-radius: 22px; }
+            .sh-cmd-h { font-size: 32px; }
+            .sh-cmd-p { font-size: 15px; }
+        }
     </style>
-    <link rel="stylesheet" href="assets/css/commande.css">
 
+    <link rel="stylesheet" href="assets/css/panier.css">
 </head>
 
 <body class="tp-magic-cursor">
@@ -243,21 +257,26 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-8 d-none d-xl-block">
+                <div class="col-xl-7 d-none d-xl-block">
                     <div class="tp-header-box text-center">
                         <div class="tp-header-menu tp-header-dropdown dropdown-white-bg">
                             <nav class="tp-mobile-menu-active">
                                 <ul>
                                     <li><a href="index.html">Accueil</a></li>
                                     <li><a href="produits.html">Produits</a></li>
+                                    <li><a href="commander.html">Commander</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-6 col-6">
+                <div class="col-xl-3 col-lg-6 col-6">
                     <div class="tp-header-right text-end">
+                        <div class="sh-hactions">
+                            <a class="sh-hbtn" href="commander.html">Commander</a>
+                            <a class="sh-hcart" href="commander.html#panier" aria-label="Panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h2.6l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.2l1.6-6.8H6.2"/></svg><span class="sh-hcart-n" hidden>0</span></a>
+                        </div>
                         <div class="tp-header-14-bar-wrap ml-20">
                             <button class="tp-header-8-bar tp-offcanvas-open-btn">
                                 <span>Menu</span>
@@ -326,7 +345,7 @@
                             <div class="col-lg-6">
                                 <div class="tp-portfolio-masonry-grid-item mb-70">
                                     <div class="tp-portfolio-masonry-grid-thumb tp--hover-item">
-                                        <a href="portfolio-details-gallery-light.html">
+                                        <a href="commander.html#produits">
                                             <div class="tp--hover-img" data-displacement="assets/img/webgl/1.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
                                                 <img src="assetsahello/accueil/16.png" alt="Maraîchage SA'HELLO">
                                             </div>
@@ -334,7 +353,7 @@
                                     </div>
                                     <div class="tp-portfolio-masonry-grid-content d-flex align-items-center justify-content-between">
                                         <div class="tp-portfolio-masonry-grid-left">
-                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="portfolio-details-gallery-light.html">Maraîchage</a></h4>
+                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="commander.html#produits">Maraîchage</a></h4>
                                         </div>
                                         <div class="tp-portfolio-masonry-grid-categories">
                                             <span>Tomate</span>
@@ -349,7 +368,7 @@
                             <div class="col-lg-6">
                                 <div class="tp-portfolio-masonry-grid-item mb-70">
                                     <div class="tp-portfolio-masonry-grid-thumb tp--hover-item">
-                                        <a href="portfolio-details-gallery-light.html">
+                                        <a href="commander.html#produits">
                                             <div class=" tp--hover-img" data-displacement="assets/img/webgl/1.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
                                                 <img src="assetsahello/accueil/pisc1.png" alt="Pisciculture SA'HELLO">
                                             </div>
@@ -357,7 +376,7 @@
                                     </div>
                                     <div class="tp-portfolio-masonry-grid-content d-flex align-items-center justify-content-between">
                                         <div class="tp-portfolio-masonry-grid-left">
-                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="portfolio-details-gallery-light.html">Pisciculture</a></h4>
+                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="commander.html#produits">Pisciculture</a></h4>
                                         </div>
                                         <div class="tp-portfolio-masonry-grid-categories">
                                             <span>Tilapias</span>
@@ -370,7 +389,7 @@
                             <div class="col-lg-12">
                                 <div class="tp-portfolio-masonry-grid-item mb-70">
                                     <div class="tp-portfolio-masonry-grid-thumb tp--hover-item">
-                                        <a href="portfolio-details-gallery-light.html">
+                                        <a href="commander.html#produits">
                                             <div class=" tp--hover-img" data-displacement="assets/img/webgl/1.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
                                                 <img src="assetsahello/accueil/avi3.png" alt="Aviculture SA'HELLO">
                                             </div>
@@ -378,7 +397,7 @@
                                     </div>
                                     <div class="tp-portfolio-masonry-grid-content d-flex align-items-center justify-content-between">
                                         <div class="tp-portfolio-masonry-grid-left">
-                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="portfolio-details-gallery-light.html">Aviculture</a></h4>
+                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="commander.html#produits">Aviculture</a></h4>
                                         </div>
                                         <div class="tp-portfolio-masonry-grid-categories">
                                             <span>Volaille fraîche</span>
@@ -391,7 +410,7 @@
                             <div class="col-lg-6">
                                 <div class="tp-portfolio-masonry-grid-item mb-70">
                                     <div class="tp-portfolio-masonry-grid-thumb tp--hover-item">
-                                        <a href="portfolio-details-gallery-light.html">
+                                        <a href="commander.html#produits">
                                             <div class=" tp--hover-img" data-displacement="assets/img/webgl/1.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
                                                 <img src="assetsahello/accueil/beur3.png" alt="Transformation SA'HELLO">
                                             </div>
@@ -399,7 +418,7 @@
                                     </div>
                                     <div class="tp-portfolio-masonry-grid-content d-flex align-items-center justify-content-between">
                                         <div class="tp-portfolio-masonry-grid-left">
-                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="portfolio-details-gallery-light.html">Transformation</a></h4>
+                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="commander.html#produits">Transformation</a></h4>
                                         </div>
                                         <div class="tp-portfolio-masonry-grid-categories">
                                             <span>Miel</span>
@@ -412,7 +431,7 @@
                             <div class="col-lg-6">
                                 <div class="tp-portfolio-masonry-grid-item mb-70">
                                     <div class="tp-portfolio-masonry-grid-thumb tp--hover-item">
-                                        <a href="portfolio-details-gallery-light.html">
+                                        <a href="commander.html#produits">
                                             <div class=" tp--hover-img" data-displacement="assets/img/webgl/1.jpg" data-intensity="0.6" data-speedin="1" data-speedout="1">
                                                 <img src="assetsahello/accueil/beur3.png" alt="Apiculture SA'HELLO">
                                             </div>
@@ -420,7 +439,7 @@
                                     </div>
                                     <div class="tp-portfolio-masonry-grid-content d-flex align-items-center justify-content-between">
                                         <div class="tp-portfolio-masonry-grid-left">
-                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="portfolio-details-gallery-light.html">Apiculture</a></h4>
+                                            <h4 class="tp-portfolio-masonry-grid-title"><a class="tp-line-white" href="commander.html#produits">Apiculture</a></h4>
                                         </div>
                                         <div class="tp-portfolio-masonry-grid-categories">
                                             <span>Miel naturel</span>
@@ -458,13 +477,16 @@
                 <!-- portfolio masonry grid end -->
 
                 <!-- pour commander start -->
-                <section class="shc" id="commander">
+                <section class="sh-cmd-cta" id="commander">
                     <div class="container container-1230">
-                        <div class="shc-intro">
-                            <p class="shc-kicker">Commande en ligne</p>
-                            <h2 class="shc-h2">Pour commander&nbsp;!</h2>
+                        <div class="sh-cmd-box">
+                            <div>
+                                <p class="sh-cmd-k">Commande en ligne</p>
+                                <h2 class="sh-cmd-h">Pour commander&nbsp;!</h2>
+                                <p class="sh-cmd-p">Choisissez vos produits, la quantité, la livraison ou le retrait : votre commande nous arrive sur WhatsApp.</p>
+                            </div>
+                            <a class="sh-hbtn sh-cmd-btn" href="commander.html">Commander maintenant</a>
                         </div>
-                        <div class="sha" id="sha"></div>
                     </div>
                 </section>
                 <!-- pour commander end -->
@@ -600,7 +622,7 @@
     <!-- JS here -->
     <!-- JS here -->
 
-    <script src="assets/js/commande.js"></script>
+    <script src="assets/js/panier.js"></script>
 </body>
 
 </html>
