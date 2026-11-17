@@ -24,8 +24,6 @@
 .tp-header-right .sh-hactions { margin-right: 0; flex-shrink: 0; }
 .tp-header-right .tp-header-14-bar-wrap { flex-shrink: 0; }
 .tp-header-right .tp-header-8-bar { white-space: nowrap; }
-/* sur ordinateur, le bouton orange remplace le lien « Commander » du menu central */
-.tp-header-menu li:has(> a[href="commander.html"]) { display: none; }
 .tp-header-2-right { align-items: center; }
 
 /* pastille flottante, en bas à gauche (le bouton « haut de page » est à droite) */
