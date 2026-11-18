@@ -36,7 +36,8 @@
 
   var LIVRAISON = [
     { id: 'domicile', titre: 'Livraison', desc: 'Bamako & Kati', adresse: true },
-    { id: 'retrait',  titre: 'Retrait',   desc: 'À la ferme',    adresse: false }
+    { id: 'retrait',  titre: 'Retrait',   desc: 'À la ferme',    adresse: false },
+    { id: 'point',    titre: 'Point de retrait', desc: 'À confirmer', adresse: false }
   ];
   var PAIEMENT = [
     { id: 'especes', titre: 'Espèces' },
