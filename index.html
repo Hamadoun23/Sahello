@@ -191,9 +191,29 @@
         .design-project-content.sh-pisci { padding-left: 60px; }
         .design-hero-social a { white-space: nowrap; }
         @media (max-width: 1199px) { .design-project-content.sh-pisci { padding-left: 0; } }
+        /* barre de navigation identique à la page Produits */
+        .tp-header-inner-style .tp-header-14-bar-wrap .tp-header-8-bar:not(:hover) span {
+            color: #FFFFFF !important;
+        }
+        .tp-header-inner-style .tp-header-14-bar-wrap .tp-header-8-bar:not(:hover) span svg path {
+            fill: #FFFFFF !important;
+        }
+        .header-sticky.tp-header-inner-style .tp-header-menu > nav > ul > li > a {
+            color: #2A4C3A !important;
+        }
+        .header-sticky.tp-header-inner-style .tp-header-dropdown nav ul li.has-dropdown::after {
+            color: #2A4C3A !important;
+        }
+        .header-sticky.tp-header-inner-style .tp-header-14-bar-wrap .tp-header-8-bar span {
+            color: #2A4C3A !important;
+        }
+        .header-sticky.tp-header-inner-style .tp-header-14-bar-wrap .tp-header-8-bar span svg path {
+            fill: #2A4C3A !important;
+        }
     </style>
 
     <link rel="stylesheet" href="assets/css/panier.css">
+    <link rel="stylesheet" href="assets/css/sahello.css">
 </head>
 
 <body class="tp-magic-cursor">
@@ -320,27 +340,45 @@
     </div>
     <!-- offcanvas area end -->
 
-    <header>
-
-        <!-- header area start -->
-        <div class="tp-header-2-area header-black-style z-index-3 mt-15">
-            <div class="container container-1750">
-                <div class="row align-items-center">
-                    <div class="col-6">
-                        <div class="tp-header-logo">
-                            <a href="index.html"><img data-width="140px" src="assetsahello/logo/logoblanc.png" alt="SA'HELLO"></a>
+    <!-- header area start -->
+    <div id="header-sticky" class="tp-header-area tp-header-inner-style tp-header-ptb tp-header-blur sticky-white-bg header-transparent mt-30 @@class">
+        <div class="container container-1830">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-6 col-6">
+                    <div class="tp-header-logo">
+                        <a href="index.html">
+                            <img data-width="120" class="logo-white" src="assetsahello/logo/logoblanc.png" alt="">
+                            <img data-width="120" class="logo-black d-none" src="assetsahello/logo/logo1.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-none d-xl-block">
+                    <div class="tp-header-box text-center">
+                        <div class="tp-header-menu tp-header-dropdown dropdown-white-bg">
+                            <nav class="tp-mobile-menu-active">
+                                <ul>
+                                    <li><a href="index.html">Accueil</a></li>
+                                    <li><a href="produits.html">Produits</a></li>
+                                    <li><a href="commander.html">Commander</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="tp-header-2-right d-flex justify-content-end">
-                                <div class="sh-hactions">
-                                    <a class="sh-hcart" href="commander.html#panier" aria-label="Panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h2.6l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.2l1.6-6.8H6.2"/></svg><span class="sh-hcart-n" hidden>0</span></a>
-                                </div>
-                            <button class="tp-header-2-bar tp-offcanvas-open-btn d-flex align-items-center">
+                </div>
+                <div class="col-xl-3 col-lg-6 col-6">
+                    <div class="tp-header-right text-end">
+                        <div class="sh-hactions">
+                            <a class="sh-hcart" href="commander.html#panier" aria-label="Panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3.5h2.6l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.4a1.6 1.6 0 0 0 1.6-1.2l1.6-6.8H6.2"/></svg><span class="sh-hcart-n" hidden>0</span></a>
+                        </div>
+                        <div class="tp-header-14-bar-wrap ml-20">
+                            <button class="tp-header-8-bar tp-offcanvas-open-btn">
                                 <span>Menu</span>
                                 <span>
-                                    <i></i>
-                                    <i></i>
+                                    <svg width="24" height="8" viewBox="0 0 24 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0H14V1.5H0V0Z" fill="currentcolor" />
+                                        <path d="M0 6H24V7.5H0V6Z" fill="currentcolor" />
+                                    </svg>
                                 </span>
                             </button>
                         </div>
@@ -348,18 +386,8 @@
                 </div>
             </div>
         </div>
-
-        <nav class="tp-mobile-menu-active d-none">
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="produits.html">Produits</a></li>
-                <li><a href="commander.html">Commander</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- header area end -->
-
-    </header>
+    </div>
+    <!-- header area end -->
 
 
     <div id="smooth-wrapper">
@@ -502,110 +530,68 @@
                 <!-- banner area end -->
 
                 <!-- project area start -->
-                <div class="design-project-area design-project-2-style pt-200 pb-60 title-box" id="nos-produits">
-                    <div class="container container-1680">
-                        <div class="design-project-title-wrap mb-140">
-                            <div class="row align-items-end">
-                                <div class="col-xl-9 col-lg-9 col-md-9">
-                                    <div class="design-project-title-box">
-                                        <h4 class="tp-section-title-dirtyline">
-                                            <span class="tp-text-right-scroll tp_text_invert_2">nos</span> <br>
-                                            <span class="tp_text_invert_2">produits</span>
-                                        </h4>
-                                        <p>
-                                            Agriculture écologique à Dio Ba.
-                                            Légumes frais, volaille, poisson :
-                                            des produits sains toute l'année.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-3 col-md-3">
-                                    <div class="design-project-btn text-start text-md-end">
-                                        <a class="tp-btn-sky-border" href="produits.html">Tous nos produits</a>
-                                    </div>
-                                </div>
+                <section class="shx-section" id="nos-produits">
+                    <div class="container container-1230">
+                        <div class="shx-head">
+                            <div>
+                                <p class="shx-kicker">Nos activités</p>
+                                <h2 class="shx-h2">Ce que nous <span>produisons</span></h2>
+                                <p class="shx-intro">Agriculture écologique à Dio Ba. Légumes frais, volaille, poisson&nbsp;: des produits sains toute l'année.</p>
                             </div>
+                            <a class="shx-btn contour" href="produits.html">Tous nos produits <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
-                        <div class="design-project-item-wrap">
-                            <div class="design-project-item mb-120">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-5 order-xl-0 order-1">
-                                        <div class="design-project-content">
-                                            <h4 class="design-project-title tp_reveal_anim"><a href="produits.html">Agriculture</a></h4>
-                                            <span class="tp_reveal_anim">Légumes, fruits et céréales</span>
-                                            <a class="tp-btn-sky-border height-50" href="produits.html">Découvrir</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7 order-xl-1 order-0">
-                                        <div class="design-project-thumb item-1 text-end">
-                                            <img src="assetsahello/photos/agriculture.webp" alt="Cultures de la ferme SA'HELLO" width="1400" height="764" loading="lazy">
-                                        </div>
-                                    </div>
+                        <div class="shx-cards">
+                            <article class="shx-card">
+                                <a class="shx-card-img" href="produits.html"><img src="assetsahello/photos/carte-agriculture.webp" alt="Deux membres de l'équipe SA'HELLO devant un arbre fruitier" width="900" height="675" loading="lazy"></a>
+                                <div class="shx-card-body">
+                                    <h3 class="shx-card-title"><a href="produits.html">Agriculture</a></h3>
+                                    <p class="shx-card-text">Légumes, fruits et céréales</p>
+                                    
+                                    <a class="shx-card-link" href="produits.html">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                                 </div>
-                            </div>
-                            <div class="design-project-item mb-120">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-7">
-                                        <div class="design-project-thumb item-2">
-                                            <img src="assetsahello/photos/pisciculture.webp" alt="Bassin piscicole SA'HELLO" width="1400" height="764" loading="lazy">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-5">
-                                        <div class="design-project-content sh-pisci">
-                                            <h4 class="design-project-title tp_reveal_anim"><a href="produits.html">Pisciculture</a></h4>
-                                            <span class="tp_reveal_anim">Tilapias, poissons-chats — Frais ou fumé</span>
-                                            <a class="tp-btn-sky-border height-50" href="produits.html">Découvrir</a>
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="shx-card">
+                                <a class="shx-card-img" href="produits.html"><img src="assetsahello/photos/carte-pisciculture.webp" alt="Bassin piscicole de la ferme SA'HELLO" width="900" height="675" loading="lazy"></a>
+                                <div class="shx-card-body">
+                                    <h3 class="shx-card-title"><a href="produits.html">Pisciculture</a></h3>
+                                    <p class="shx-card-text">Tilapias, poissons-chats — Frais ou fumé</p>
+                                    
+                                    <a class="shx-card-link" href="produits.html">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                                 </div>
-                            </div>
-                            <div class="design-project-item mb-120">
-                                <div class="row align-items-center">
-                                    <div class="col-xl-5 order-xl-0 order-1">
-                                        <div class="design-project-content">
-                                                <h4 class="design-project-title tp_reveal_anim"><a href="produits.html">Élevage</a></h4>
-                                            <span class="tp_reveal_anim">Volaille fraîche et fumée, œufs et viande</span>
-                                            <a class="tp-btn-sky-border height-50" href="produits.html">Découvrir</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7 order-xl-1 order-0">
-                                        <div class="design-project-thumb item-1 text-end">
-                                            <img src="assetsahello/photos/elevage.webp" alt="Poussins de l'élevage SA'HELLO" width="1400" height="764" loading="lazy">
-                                        </div>
-                                    </div>
+                            </article>
+                            <article class="shx-card">
+                                <a class="shx-card-img" href="produits.html"><img src="assetsahello/photos/carte-elevage.webp" alt="Poussins de l'élevage SA'HELLO" width="900" height="675" loading="lazy"></a>
+                                <div class="shx-card-body">
+                                    <h3 class="shx-card-title"><a href="produits.html">Élevage</a></h3>
+                                    <p class="shx-card-text">Volaille fraîche et fumée, œufs et viande</p>
+                                    
+                                    <a class="shx-card-link" href="produits.html">Découvrir <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- project area end -->
 
-                <!-- video area start -->
-                <div class="tp-video-area black-bg fix">
-                    <div class="container-fluid p-0">
-                        <div class="tp-video-thumb-wrap">
-                            <div class="tp-video-thumb d-none d-xl-block">
-                                <img src="assetsahello/photos/mosaique-1.webp" alt="Bissap de la ferme" width="1000" height="545" loading="lazy">
-                            </div>
-                            <div class="tp-video-thumb mb-25">
-                                <img src="assetsahello/photos/mosaique-2.webp" alt="L'équipe SA'HELLO" width="1000" height="545" loading="lazy">
-                            </div>
-                            <div class="tp-video-thumb d-none d-xl-block mb-25">
-                                <img src="assetsahello/photos/mosaique-3.webp" alt="Poules et poussins" width="1000" height="545" loading="lazy">
-                            </div>
-                            <div class="tp-video-thumb d-none d-xl-block mb-25">
-                                <img src="assetsahello/photos/mosaique-4.webp" alt="Papayes de la ferme" width="1000" height="545" loading="lazy">
-                            </div>
-                            <div class="tp-video-thumb d-none d-xl-block">
-                                <img src="assetsahello/photos/mosaique-5.webp" alt="Bananes de la ferme" width="1000" height="545" loading="lazy">
-                            </div>
-                            <div class="tp-video-thumb d-none d-xl-block">
-                                <img src="assetsahello/photos/mosaique-6.webp" alt="Bassin piscicole" width="1000" height="545" loading="lazy">
+                <!-- galerie start -->
+                <section class="shx-section creme" id="la-ferme">
+                    <div class="container container-1230">
+                        <div class="shx-head">
+                            <div>
+                                <p class="shx-kicker">La ferme</p>
+                                <h2 class="shx-h2">La ferme <span>en images</span></h2>
                             </div>
                         </div>
+                        <div class="shx-galerie">
+                            <figure class="grand"><img src="assetsahello/photos/galerie-ferme.webp" alt="La ferme SA'HELLO à Dio Ba vue du ciel" loading="lazy"><figcaption>Dio Ba, vue du ciel</figcaption></figure>
+                            <figure><img src="assetsahello/photos/galerie-equipe.webp" alt="L'équipe SA'HELLO" loading="lazy"><figcaption>L'équipe</figcaption></figure>
+                            <figure><img src="assetsahello/photos/galerie-bissap.webp" alt="Bissap de la ferme" loading="lazy"><figcaption>Bissap</figcaption></figure>
+                            <figure><img src="assetsahello/photos/galerie-volaille.webp" alt="Un membre de l'équipe avec une poule" loading="lazy"><figcaption>Élevage</figcaption></figure>
+                            <figure><img src="assetsahello/photos/galerie-papayes.webp" alt="Papayes de la ferme" loading="lazy"><figcaption>Papayes</figcaption></figure>
+                        </div>
                     </div>
-                </div>
-                <!-- video area end -->
+                </section>
+                <!-- galerie end -->
 
                 <!-- qui sommes-nous start -->
                 <section class="sh-about" id="qui-sommes-nous">
@@ -620,7 +606,7 @@
 
                         <div class="sh-about-body">
                             <div class="sh-about-photo">
-                                <img src="assetsahello/photos/femmes.webp" alt="Réunion avec les femmes partenaires de SA'HELLO" width="1200" height="655" loading="lazy">
+                                <img src="assetsahello/photos/apropos.webp" alt="Réunion avec les femmes partenaires de SA'HELLO" width="1100" height="825" loading="lazy">
                                 <div class="sh-about-badge"><strong>Dio Ba, Mali</strong>Agriculture locale &amp; écologique</div>
                             </div>
                             <div class="sh-about-text">
@@ -630,12 +616,15 @@
                                 <p>
                                     Chez SA'HELLO, nous croyons que bien se nourrir ne devrait être ni un luxe ni une contrainte financière. Dans un contexte où le coût de la vie pèse de plus en plus sur les ménages, nous voulons rendre les produits de qualité, sains pour les consommateurs et respectueux de l'environnement, accessibles à des prix abordables. Nous sommes convaincus que l'alimentation ne devrait pas absorber l'essentiel du budget d'un foyer.
                                 </p>
+                                <div class="sh-about-plus" id="sh-about-plus">
                                 <p>
                                     Mais notre engagement ne s'arrête pas aux consommateurs. Il concerne également celles et ceux qui cultivent la terre. Trop souvent, faute de solutions adaptées de stockage, de conservation et de commercialisation, les producteurs sont contraints de brader leurs récoltes et de vendre à des prix qui ne reflètent pas la valeur de leur travail.
                                 </p>
                                 <p>
                                     Nous voulons contribuer à changer cette réalité en créant un lien plus direct et plus équitable entre producteurs et consommateurs&nbsp;: mieux valoriser les récoltes, offrir de meilleurs débouchés aux agriculteurs et proposer aux foyers des produits locaux de qualité à des prix raisonnables.
                                 </p>
+                                </div>
+                                <button type="button" class="sh-about-toggle" aria-expanded="false" aria-controls="sh-about-plus"><span>Lire la suite</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
                             </div>
                         </div>
 
@@ -943,6 +932,19 @@
     <!-- JS here -->
 
     <script src="assets/js/panier.js"></script>
+    <script>
+        /* Qui sommes-nous : « Lire la suite » */
+        (function () {
+            var b = document.querySelector('.sh-about-toggle');
+            if (!b) return;
+            b.addEventListener('click', function () {
+                var t = b.closest('.sh-about-text'), o = t.classList.toggle('ouvert');
+                b.setAttribute('aria-expanded', o);
+                b.querySelector('span').textContent = o ? 'Réduire' : 'Lire la suite';
+                if (window.ScrollTrigger) setTimeout(function () { ScrollTrigger.refresh(); }, 50);
+            });
+        })();
+    </script>
 </body>
 
 </html>

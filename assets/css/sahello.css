@@ -1,0 +1,117 @@
+/* SA'HELLO — composants maison (accueil + produits).
+   Images toujours dans un cadre à format fixe : elles ne s'étirent ni ne s'agrandissent jamais. */
+:root {
+  --shx-vert: #005f41;
+  --shx-vert-fonce: #0b4a35;
+  --shx-texte: #0e0f11;
+  --shx-doux: #4a5450;
+  --shx-creme: #f6f3ec;
+  --shx-ligne: #e7e2d6;
+}
+
+/* ---------- en-têtes de section ---------- */
+.shx-section { padding: 120px 0; }
+.shx-section.creme { background: var(--shx-creme); }
+.shx-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
+.shx-kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 14px; font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--shx-vert); }
+.shx-kicker::before { content: ""; width: 28px; height: 1px; background: currentColor; opacity: .5; }
+.shx-h2 { margin: 0; font-size: 48px; font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; color: var(--shx-texte); }
+.shx-h2 span { color: var(--shx-vert); }
+.shx-intro { max-width: 520px; margin: 14px 0 0; font-size: 18px; line-height: 1.55; color: var(--shx-doux); }
+.shx-btn {
+  display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 26px; border-radius: 999px;
+  background: var(--shx-vert); color: #fff !important; font-size: 15px; font-weight: 600; white-space: nowrap;
+  transition: background .2s ease, transform .2s ease;
+}
+.shx-btn:hover { background: var(--shx-vert-fonce); transform: translateY(-1px); }
+.shx-btn.contour { background: transparent; color: var(--shx-vert) !important; border: 1.5px solid var(--shx-vert); }
+.shx-btn.contour:hover { background: var(--shx-vert); color: #fff !important; }
+.shx-btn svg { width: 16px; height: 16px; }
+
+/* ---------- cartes (activités, produits) ---------- */
+.shx-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.shx-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--shx-ligne); border-radius: 26px; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease; }
+.shx-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(14, 15, 17, .08); }
+.shx-card-img { display: block; aspect-ratio: 4 / 3; overflow: hidden; background: var(--shx-creme); }
+.shx-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.shx-card:hover .shx-card-img img { transform: scale(1.04); }
+.shx-card-body { display: flex; flex-direction: column; gap: 12px; padding: 24px 26px 26px; flex: 1; }
+.shx-card-title { margin: 0; font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--shx-texte); }
+.shx-card-title a { color: inherit; }
+.shx-card-text { margin: 0; font-size: 16px; line-height: 1.55; color: var(--shx-doux); }
+.shx-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.shx-tags li { padding: 6px 12px; border-radius: 999px; background: var(--shx-creme); font-size: 13px; font-weight: 600; color: var(--shx-vert-fonce); }
+.shx-card-link { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; color: var(--shx-vert) !important; }
+.shx-card-link svg { width: 16px; height: 16px; transition: transform .2s ease; }
+.shx-card:hover .shx-card-link svg { transform: translateX(3px); }
+
+/* ---------- galerie « La ferme en images » ---------- */
+.shx-galerie { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 250px; gap: 16px; }
+.shx-galerie figure { position: relative; margin: 0; border-radius: 22px; overflow: hidden; background: var(--shx-ligne); }
+.shx-galerie figure.grand { grid-column: span 2; grid-row: span 2; }
+.shx-galerie img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.shx-galerie figure:hover img { transform: scale(1.04); }
+.shx-galerie figcaption {
+  position: absolute; left: 14px; bottom: 14px; padding: 7px 13px; border-radius: 999px;
+  background: rgba(255, 255, 255, .92); font-size: 13px; font-weight: 600; color: var(--shx-texte);
+}
+
+/* ---------- bandeau photo sous le hero ---------- */
+.design-video-area .design-video-thumb { height: min(72vh, 720px); overflow: hidden; }
+.design-video-area .design-video-thumb img { width: 100%; height: 120%; object-fit: cover; }
+
+/* ---------- Qui sommes-nous ---------- */
+.sh-about-body { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.sh-about-photo { position: relative; border-radius: 24px; overflow: hidden; aspect-ratio: 4 / 3; }
+.sh-about-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sh-about-text p { font-size: 17px; line-height: 1.7; color: var(--shx-doux); margin-bottom: 18px; }
+.sh-about-plus { display: none; }
+.sh-about-text.ouvert .sh-about-plus { display: block; }
+.sh-about-toggle {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; padding: 0; border: 0; background: none;
+  font-size: 15px; font-weight: 700; color: var(--shx-vert); cursor: pointer;
+}
+.sh-about-toggle svg { width: 16px; height: 16px; transition: transform .2s ease; }
+.sh-about-text.ouvert .sh-about-toggle svg { transform: rotate(180deg); }
+
+/* ---------- chiffres clés : plus compacts ---------- */
+.design-choose-item { padding: 44px 48px; }
+.design-choose-item span { font-size: clamp(56px, 6vw, 96px) !important; line-height: 1 !important; margin-bottom: 36px !important; }
+
+/* ---------- tablette ---------- */
+@media (max-width: 1199px) {
+  .shx-section { padding: 90px 0; }
+  .shx-h2 { font-size: 40px; }
+  .shx-cards { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .shx-galerie { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 210px; }
+  .shx-galerie figure.grand { grid-column: span 3; grid-row: span 2; }
+  .sh-about-body { grid-template-columns: 1fr; gap: 36px; }
+  .sh-about-photo { aspect-ratio: 16 / 10; }
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 767px) {
+  .shx-section { padding: 70px 0; }
+  .shx-head { margin-bottom: 30px; }
+  .shx-h2 { font-size: 32px; }
+  .shx-intro { font-size: 16px; }
+  .shx-cards { grid-template-columns: 1fr; gap: 18px; }
+  .shx-card { border-radius: 22px; }
+  .shx-card-body { padding: 20px 20px 22px; }
+  .shx-card-title { font-size: 22px; }
+  .shx-card-text { font-size: 15px; }
+  .shx-galerie { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; gap: 10px; }
+  .shx-galerie figure { border-radius: 16px; }
+  .shx-galerie figure.grand { grid-column: span 2; grid-row: span 2; }
+  .shx-galerie figcaption { left: 10px; bottom: 10px; font-size: 12px; padding: 5px 10px; }
+  .design-video-area .design-video-thumb { height: 46vh; }
+  .sh-about-photo { aspect-ratio: 4 / 3; border-radius: 20px; }
+  .sh-about-text p { font-size: 16px; }
+  .design-choose-item { padding: 28px 24px !important; }
+  .design-choose-item span { font-size: 54px !important; margin-bottom: 14px !important; }
+}
+
+/* page Produits : le grand titre ne passe plus sous le logo et le panier */
+@media (max-width: 1199px) {
+  .tp-portfolio-masonry-header-green { padding-top: 190px !important; }
+}

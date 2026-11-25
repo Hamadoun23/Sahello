@@ -88,6 +88,12 @@
         .sh-contact-rule.is-error { color: #c4320a; }
         .ajax-response.error { color: #c4320a; }
         .ajax-response.success { color: #005f41; }
+        /* mobile : l'adresse e-mail tient dans sa carte, le titre ne passe plus sous le logo */
+        .pp-footer-title a { overflow-wrap: anywhere; }
+        @media (max-width: 991px) {
+            .pp-footer-title { font-size: clamp(22px, 7.4vw, 60px) !important; }
+            .tp-contact-header-green { padding-top: 190px !important; }
+        }
     </style>
 
     <link rel="stylesheet" href="assets/css/panier.css">
