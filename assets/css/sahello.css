@@ -115,3 +115,14 @@
 @media (max-width: 1199px) {
   .tp-portfolio-masonry-header-green { padding-top: 190px !important; }
 }
+
+/* Images des blocs animés du thème : la hauteur suit la largeur (jamais d'étirement). */
+.tp-video-thumb img,
+.tp-portfolio-masonry-grid-thumb img,
+.design-project-thumb img { height: auto !important; }
+
+/* Mobile : les images des blocs Agriculture / Pisciculture / Élevage prennent toute la largeur. */
+@media (max-width: 1199px) {
+  .design-project-thumb { text-align: left !important; }
+  .design-project-thumb img { width: 100% !important; max-width: 100% !important; border-radius: 20px; }
+}
