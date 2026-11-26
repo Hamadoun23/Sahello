@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var WHATSAPP = '22372707914';
+  var WHATSAPP = '22366260020';
 
   var CATEGORIES = [
     { id: 'maraichage', nom: 'Maraîchage',      img: 'assetsahello/commande/gombo.webp',        desc: 'Légumes cultivés à Dio Ba avec du compost et des engrais organiques, récoltés au plus près de la commande.' },
